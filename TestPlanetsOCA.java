@@ -1,5 +1,7 @@
 package oca.samples;
 
+import java.io.ObjectInputStream.GetField;
+
 public class TestPlanetsOCA {
 
 	/**
@@ -7,14 +9,23 @@ public class TestPlanetsOCA {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Planet earth = new Earth();
-		System.out.println(earth.rotation());
+		Planet planetEarth = new Earth();
+		planetEarth = planetEarth.getPlanet();
+		//System.out.println(planetEarth.rotation());
+		Earth earthObject = (Earth)planetEarth;
+		
+	System.out.println("Planeta "+earthObject.getName());	
 	}
 
 }
 
 class Planet {
 	int distanceFromSun;
+	Planet planetObject;
+	
+	Planet getPlanet(){
+		return planetObject;
+	}
 
 	Planet() {
 		System.out.println("This is a Planet");
@@ -30,6 +41,21 @@ class Planet {
 }
 
 class Earth extends Planet {
+	
+	String name;
+	Earth objectEarth;
+	public Earth getObjectEarth() {
+		return objectEarth;
+	}
+	public void setObjectEarth(Earth objectEarth) {
+		this.objectEarth = objectEarth;
+	}
+	public String getName() {
+		return "Miguel";
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	String rotation() {
 
 		return "The Earth rotates once every 24 hours";
