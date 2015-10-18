@@ -14,6 +14,12 @@ public class TestPlanetsOCA {
 		//System.out.println(planetEarth.rotation());
 		Earth earthObject = (Earth)planetEarth;
 		
+		Planet objectB = new Planet();
+		
+		Earth A = (Earth) objectB.getPlanet();
+		
+		
+		
 	System.out.println("Planeta "+earthObject.getName());	
 	}
 
@@ -44,6 +50,10 @@ class Earth extends Planet {
 	
 	String name;
 	Earth objectEarth;
+	Planet objectPlanet;
+	public Planet getObjectPlanet(){
+		return objectPlanet;
+	}
 	public Earth getObjectEarth() {
 		return objectEarth;
 	}
