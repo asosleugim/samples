@@ -1,6 +1,7 @@
 package oca.samples.collections;
 
-public class Employee implements Comparable<Employee> {
+public class Employee implements Comparable<Employee>
+{
 
 	private String firstName;
 	private String lastName;

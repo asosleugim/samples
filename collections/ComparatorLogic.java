@@ -34,7 +34,7 @@ public class ComparatorLogic {
 		Iterator<Employee> it = empList.iterator();
 
 		while (it.hasNext()) {
-			Employee obj = (Employee) it.next();
+			Employee obj =  it.next();
 			System.out.println(obj.getLastName());
 		}
 
