@@ -6,7 +6,7 @@ public class Country {
 	private String name;
 	private String isoCode;
 	private String currency;
-	private List states;
+	private List<State> states;
 	/**
 	 * @return the name
 	 */
@@ -46,13 +46,13 @@ public class Country {
 	/**
 	 * @return the states
 	 */
-	public List getStates() {
+	public List<State> getStates() {
 		return states;
 	}
 	/**
 	 * @param states the states to set
 	 */
-	public void setStates(List states) {
+	public void setStates(List<State> states) {
 		this.states = states;
 	}
 	
