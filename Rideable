@@ -1,0 +1,50 @@
+interface Rideable 
+{
+
+  String getGait();
+
+}
+
+
+public class Camel implements Rideable {
+
+  int weight = 2;
+
+  public static void main(String[] args) {
+
+    new Camel().go(8);
+
+  }
+
+  void go(int speed) {
+
+    ++speed;
+
+    weight++;
+
+    int walkrate = speed * weight;
+
+    System.out.print(walkrate + getGait() );
+
+  }
+
+  //This method will give compilation error since it's not declaring public the implemented method from the Interface 
+  //String getGait() 
+   //{
+   //return " mph, lope";
+   //}
+  
+  public String getGait() {
+
+    return " mph, lope";
+
+  }
+}
+
+
+//speed 9
+// weight 3
+//walkrate 27
+//27 mph, lope
+
+//an interface method is always abstract and public. Therefore; the class that implements this Interface should declare its methods public.
